@@ -1,6 +1,7 @@
 // Function to reveal the surprise message
 function revealSurprise() {
-    document.getElementById('surprise').style.display = 'block';
+    const surpriseElement = document.getElementById('surprise');
+    surpriseElement.style.display = 'block'; // Show the hidden surprise message
 }
 
 // Countdown Timer
@@ -22,3 +23,6 @@ function updateCountdown() {
 }
 
 setInterval(updateCountdown, 1000);
+
+// Log message to confirm the script is running
+console.log("script.js is loaded and running!");
