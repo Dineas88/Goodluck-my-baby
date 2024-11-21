@@ -1,27 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Good Luck, Baby!</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Good Luck, Baby! 🌟✨</h1>
-    <p>
-        I know you’ve worked so hard for this moment, and I just want to remind you: <br>
-        don’t worry about anything, you’re unstoppable! 💪💫 <br>
-        You’ve got this, and I’ll always be here cheering you on, every step of the way! 🎯💖  
-        So go shine, my baby! I love you so much 🌟💯
-    </p>
-    <button onclick="revealSurprise()">💌 Click for a Surprise 💌</button>
-    <p id="surprise" style="display:none; margin-top: 20px;">🎉 You’re going to ace it! 🎉</p>
-    <div id="countdown"></div>
-    <footer>
-        <p>Made with ❤️ by Your Director</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://source.unsplash.com/1920x1080/?nature,love'); /* Replace with the URL of the photo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Heading */
+h1 {
+    color: #ffddc1;
+    font-size: 3em;
+    margin-top: 50px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Paragraph */
+p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin: 10px 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Button styling */
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background: linear-gradient(to right, #ff6f61, #ff9472);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Surprise text */
+#surprise {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Countdown */
+#countdown {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    font-size: 1em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+footer a {
+    color: #ff9472;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
 
 
