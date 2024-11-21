@@ -4,24 +4,34 @@ function revealSurprise() {
     surpriseElement.style.display = 'block'; // Show the hidden surprise message
 }
 
-// Countdown Timer
-const examEndTime = new Date("November 23, 2024 15:00:00").getTime(); // Replace with her exam end date and time
+// Set exam start and end times
+const examStartTime = new Date("November 22, 2024 09:00:00").getTime();
+const examEndTime = new Date("November 22, 2024 10:00:00").getTime();
 const countdownElement = document.getElementById('countdown');
 
 function updateCountdown() {
     const now = new Date().getTime();
-    const timeLeft = examEndTime - now;
 
-    if (timeLeft > 0) {
+    if (now < examStartTime) {
+        // Countdown to the exam start time
+        const timeLeft = examStartTime - now;
         const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-        countdownElement.innerHTML = `⏳ Time until your exam ends: ${hours}h ${minutes}m ${seconds}s`;
+        countdownElement.innerHTML = `⏳ Time until exam starts: ${hours}h ${minutes}m ${seconds}s`;
+    } else if (now >= examStartTime && now <= examEndTime) {
+        // During the exam
+        const timeLeft = examEndTime - now;
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        countdownElement.innerHTML = `📖 Exam in progress! Time left: ${minutes}m ${seconds}s`;
     } else {
+        // After the exam ends
         countdownElement.innerHTML = "🎉 The exam is over! Relax now! 🎉";
     }
 }
 
+// Update the countdown every second
 setInterval(updateCountdown, 1000);
 
 // Log message to confirm the script is running
