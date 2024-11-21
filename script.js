@@ -5,12 +5,12 @@ function revealSurprise() {
 }
 
 // Set exam start and end times
-const examStartTime = new Date("November 22, 2024 09:00:00").getTime();
-const examEndTime = new Date("November 22, 2024 10:00:00").getTime();
+const examStartTime = new Date("November 22, 2024 09:00:00 GMT+0800").getTime(); // Time is in GMT+8 for Malaysia
+const examEndTime = new Date("November 22, 2024 10:00:00 GMT+0800").getTime(); // Time is in GMT+8 for Malaysia
 const countdownElement = document.getElementById('countdown');
 
 function updateCountdown() {
-    const now = new Date().getTime();
+    const now = new Date().getTime(); // Current time in milliseconds
 
     if (now < examStartTime) {
         // Countdown to the exam start time
